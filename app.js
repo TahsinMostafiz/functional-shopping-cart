@@ -69,7 +69,8 @@ function subTotalCalculation () {
     getSubtotalElement.innerText = subTotal;
 
     //Tax Calculation And set
-    const tax = parseInt(subTotal * 0.1);
+    const taxString = (subTotal * 0.1).toFixed(2);
+    const tax = parseFloat(taxString);
     const taxElement = document.getElementById('tax-amount');
     taxElement.innerText = tax
     //Final Total Calculation And set
